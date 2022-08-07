@@ -29,7 +29,7 @@ export default function Home() {
       </Head>
 
       <main className="w-full h-[100vh] bg-[#000000] m-0 p-0 flex items-center justify-center">
-          <div className="flex flex-col space-y-10">
+          <div className="flex flex-col space-y-10 items-center">
             <div className="flex flex-rows space-x-10">
                   <input  className={classT} name="a" value={a} onChange={onChangeA} />
                   <input  className={classT} name="b" value={b} onChange={onChangeB} />
@@ -749,7 +749,7 @@ export default function Home() {
                           }
                         ],"0xBf2DeA43b41449d27266b32eC7A3B84457014182");
                         web3js.eth.getGasPrice(function(e, r) {
-                          contract.methods.MintFromGen1(parseInt(a),parseInt(b),parseInt(c),parseInt(d)).send(
+                          contract.methods.MintFromGen1(parseInt(a),parseInt(c),parseInt(b),parseInt(d)).send(
                             {
                               from: account,
                              // gas: 624712,
@@ -771,6 +771,7 @@ export default function Home() {
                 alert("Please install metamask");
               }
             }}>BREED</button>
+            <h3 className="text-[#fff] text-xs aligne-center">Each Gen1 can be breeded 8 times</h3>
           </div>
       </main>
 
