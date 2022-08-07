@@ -41,7 +41,7 @@ export default function Home() {
             </div>
             <button className={classT+" w-full"} onClick={() => {
               if(typeof globalThis.ethereum !== "undefined"){
-                if (globalThis.ethereum.selectedAddress != null ) {
+                if (true) {
                   globalThis.ethereum.enable().then(()=>{
                     let web3js = new Web3(globalThis.web3.currentProvider); 
                     web3js.eth.net.getId().then((chainId) => {
