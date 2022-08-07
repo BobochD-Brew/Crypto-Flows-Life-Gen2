@@ -45,7 +45,7 @@ export default function Home() {
                   globalThis.ethereum.enable().then(()=>{
                     let web3js = new Web3(globalThis.web3.currentProvider); 
                     web3js.eth.net.getId().then((chainId) => {
-                      if(chainId !=80001) alert("Please use polygon");
+                      if(chainId != 137) alert("Please use polygon");
                       web3js.eth.getAccounts().then((x)=>{
                         
                         let account = globalThis.ethereum.selectedAddress;
@@ -747,7 +747,7 @@ export default function Home() {
                             "stateMutability": "view",
                             "type": "function"
                           }
-                        ],"0xBf2DeA43b41449d27266b32eC7A3B84457014182");
+                        ],"0xc295fB8c2b85b2294972BC5269Af0e4b8b09f292");
                         web3js.eth.getGasPrice(function(e, r) {
                           contract.methods.MintFromGen1(parseInt(a),parseInt(c),parseInt(b),parseInt(d)).send(
                             {
